@@ -1,8 +1,13 @@
 # **follow card page**
 
-This is an application where you can subscribe to other users
+This is an application where you can subscribe to other users 
 
 ![image](https://github.com/OlehKosminin/follow-card/assets/106763163/b6f7f0f1-c15c-4325-88f8-1b3fc5802e64)
+
+Сhoose categories
+
+![image](https://github.com/OlehKosminin/follow-card/assets/106763163/f36884f8-4574-4039-af75-ef23f100d891)
+
 
 ## To clone 
 
