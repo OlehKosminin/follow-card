@@ -1,11 +1,12 @@
-import { NavLink } from "react-router-dom";
-import { Section, Container } from "./MainPage.styled";
+import { Link } from "react-router-dom";
+import { Section, Container, Button, Title } from "./MainPage.styled";
 
 const MainPage = () => {
   return (
     <Section>
       <Container>
-        <NavLink
+        <Title>Cards social media</Title>
+        <Link
           to="/cards"
           style={{
             textDecoration: "none",
@@ -17,8 +18,8 @@ const MainPage = () => {
             fontWeight: "bold",
           }}
         >
-          Cards
-        </NavLink>
+          <Button>Go to cards</Button>
+        </Link>
       </Container>
     </Section>
   );

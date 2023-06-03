@@ -16,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/cards" element={<CardsPage />} />
+          <Route path="*" element={<MainPage />} />
         </Routes>
       </BrowserRouter>
     </Provider>

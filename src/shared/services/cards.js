@@ -9,9 +9,12 @@ export const getAllUsers = async ({ page, limit }) => {
   return result;
 };
 
-export const updUserFollowing = async ({ id, following }) => {
-  // console.log("data: ", data);
-  const result = await instance.put(`${id}`, { following });
-  console.log("result: ", result);
+export const updUserFollowing = async ({ id, following, followers }) => {
+  const result = await instance.put(`${id}`, { following, followers });
+  return result;
+};
+
+export const getUserByCategory = async (category) => {
+  const result = await instance.get(`?${category}`);
   return result;
 };
