@@ -43,7 +43,7 @@ const CardsPage = () => {
     if (category) {
       dispatch(getUserByCategory(category));
     }
-  }, [category]);
+  }, [category, dispatch]);
 
   useEffect(() => {
     setItems(cards);
