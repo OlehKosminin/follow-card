@@ -15,11 +15,22 @@ export const getAllUsers = createAsyncThunk(
 );
 
 export const updUserFollowing = createAsyncThunk(
-  "user/updFollowing",
+  "user/upd following",
   async (data, { rejectWithValue }) => {
     try {
-      console.log("data: ", data);
       const result = await api.updUserFollowing(data);
+      return result;
+    } catch ({ responce }) {
+      return rejectWithValue(responce);
+    }
+  }
+);
+
+export const getUserByCategory = createAsyncThunk(
+  "user/by category",
+  async (data, { rejectWithValue }) => {
+    try {
+      const result = await api.getUserByCategory(data);
       return result;
     } catch ({ responce }) {
       return rejectWithValue(responce);

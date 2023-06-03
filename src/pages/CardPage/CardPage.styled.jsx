@@ -19,17 +19,26 @@ export const BackBtn = styled.button`
 
   font-family: var(--base-font);
   font-weight: 600;
+  font-size: 30px;
 
   color: var(--btn-text-color);
   background-color: var(-follow-bg-btn);
 
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
+
+  transition: all 0.4s;
+  :hover {
+    opacity: 0.8;
+  }
 `;
 
 export const Header = styled.header`
   padding: 20px 15px;
-  border-bottom: 2px solid var(--btn-text-color);
+  border-bottom: 5px solid var(--border-color);
+
+  display: flex;
+  justify-content: space-around;
 `;
 
 export const List = styled.ul`
@@ -81,7 +90,6 @@ export const Line = styled.div`
 
 export const InfoWrapper = styled.div`
   position: relative;
-
   text-align: center;
 `;
 
@@ -129,7 +137,7 @@ export const TextFollowing = styled.p`
   margin-bottom: 26px;
 `;
 
-export const ButtonFollow = styled.button`
+export const Button = styled.button`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -142,46 +150,12 @@ export const ButtonFollow = styled.button`
   font-weight: 600;
 
   color: var(--btn-text-color);
-  background-color: var(--follow-bg-btn);
 
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
-`;
 
-export const ButtonFollowing = styled.button`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 14px 28px;
-
-  margin: 0 auto 36px auto;
-
-  font-family: var(--base-font);
-  font-weight: 600;
-
-  color: var(--btn-text-color);
-  background-color: var(--following-bg-btn);
-
-  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
-  border-radius: 10.3108px;
-`;
-
-export const ButtonLoadMore = styled.button`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 14px 28px;
-
-  margin: 0 auto 36px auto;
-
-  font-family: var(--base-font);
-  font-weight: 600;
-
-  color: var(--btn-text-color);
-  background-color: var(--following-bg-btn);
-
-  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
-  border-radius: 10.3108px;
+  transition: all 0.4s;
+  :hover {
+    opacity: 0.8;
+  }
 `;

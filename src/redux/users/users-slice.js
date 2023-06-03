@@ -1,8 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getAllUsers, updUserFollowing } from "./users-operation";
+import {
+  getAllUsers,
+  updUserFollowing,
+  getUserByCategory,
+} from "./users-operation";
 
 const initialState = {
   cards: [],
+  category: null,
   loading: false,
   error: null,
   fullLoad: null,
@@ -38,6 +43,19 @@ const userSlice = createSlice({
         store.error = null;
       })
       .addCase(updUserFollowing.rejected, (store, { payload }) => {
+        store.loading = false;
+        store.error = payload;
+      })
+      .addCase(getUserByCategory.pending, (store) => {
+        store.loading = true;
+        store.error = null;
+      })
+      .addCase(getUserByCategory.fulfilled, (store, { payload }) => {
+        store.loading = false;
+        store.error = null;
+        store.cards = payload.data;
+      })
+      .addCase(getUserByCategory.rejected, (store, { payload }) => {
         store.loading = false;
         store.error = payload;
       });
